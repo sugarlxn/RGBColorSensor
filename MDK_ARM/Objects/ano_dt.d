@@ -1,0 +1,15 @@
+.\objects\ano_dt.o: ..\CODE\ANO_DT.c
+.\objects\ano_dt.o: ..\CODE\ANO_DT.h
+.\objects\ano_dt.o: ..\CODE\blueteeth.h
+.\objects\ano_dt.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\objects\ano_dt.o: ..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
+.\objects\ano_dt.o: D:\STM32\MDKapp\core\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ano_dt.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
+.\objects\ano_dt.o: ..\USER\stm32f10x_conf.h
+.\objects\ano_dt.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\objects\ano_dt.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\objects\ano_dt.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\objects\ano_dt.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\objects\ano_dt.o: ..\USER\GPIOLIKE51.h
+.\objects\ano_dt.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
+.\objects\ano_dt.o: ..\CODE\blueteeth.h

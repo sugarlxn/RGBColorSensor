@@ -1,0 +1,12 @@
+.\objects\tcs34725.o: ..\CODE\TCS34725.c
+.\objects\tcs34725.o: ..\CODE\TCS34725.h
+.\objects\tcs34725.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\objects\tcs34725.o: ..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
+.\objects\tcs34725.o: D:\STM32\MDKapp\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\tcs34725.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
+.\objects\tcs34725.o: ..\USER\stm32f10x_conf.h
+.\objects\tcs34725.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\objects\tcs34725.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\objects\tcs34725.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\objects\tcs34725.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\objects\tcs34725.o: ..\USER\GPIOLIKE51.h
