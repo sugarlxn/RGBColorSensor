@@ -2,6 +2,8 @@
 #define _TCS34725_H
 #include "stm32f10x.h"
 #include "GPIOLIKE51.h"
+#include "stm32f10x_gpio.h"
+#include "delay.h"
 
 #define TCS34725_ADDRESS          (0x29)
 
@@ -67,15 +69,15 @@
 #define TCS34725_GAIN_16X                0x02   /**<  16x gain */
 #define TCS34725_GAIN_60X                0x03   /**<  60x gain */
 /******************************************************************************/
+//PB8:SCL PB9:SDA 
+#define TCS_SDA_IN()  {GPIOB->CRH&=0xFFFFFF0F;GPIOB->CRH|=8<<4;}
+#define TCS_SDA_OUT() {GPIOB->CRH&=0xFFFFFF0F;GPIOB->CRL|=3<<4;}
+#define TCS_SDA_READ   GPIOB->IDR&(1<<9)
 
-#define TCS_SDA_IN()  {GPIOB->CRH&=0xFFFF0FFF;GPIOB->CRH|=8<<12;}
-#define TCS_SDA_OUT() {GPIOB->CRH&=0xFFFF0FFF;GPIOB->CRH|=3<<12;}
-#define TCS_SDA_READ   GPIOB->IDR&(1<<11)
-
-#define TCS_SCL_H     GPIO_SetBits(GPIOB,GPIO_Pin_10)
-#define TCS_SCL_L     GPIO_ResetBits(GPIOB,GPIO_Pin_10)
-#define TCS_SDA_H     GPIO_SetBits(GPIOB,GPIO_Pin_11)
-#define TCS_SDA_L     GPIO_ResetBits(GPIOB,GPIO_Pin_11)
+#define TCS_SCL_H     GPIO_SetBits(GPIOB,GPIO_Pin_8)
+#define TCS_SCL_L     GPIO_ResetBits(GPIOB,GPIO_Pin_8)
+#define TCS_SDA_H     GPIO_SetBits(GPIOB,GPIO_Pin_9)
+#define TCS_SDA_L     GPIO_ResetBits(GPIOB,GPIO_Pin_9)
 /******************************************************************************/
 #define max3v(v1, v2, v3)   ((v1)<(v2)? ((v2)<(v3)?(v3):(v2)):((v1)<(v3)?(v3):(v1)))
 #define min3v(v1, v2, v3)   ((v1)>(v2)? ((v2)>(v3)?(v3):(v2)):((v1)>(v3)?(v3):(v1)))
@@ -93,6 +95,10 @@ typedef struct{
 	unsigned char  l;       //[0,100]
 }COLOR_HSL;//HSL
 
+u8 TCS34725_Init(void);
+u16 TCS34725_GetChannelData(u8 reg);
+u8 TCS34725_GetRawData(COLOR_RGBC *rgbc);
+void RGBtoHSL(COLOR_RGBC *Rgb, COLOR_HSL *Hsl);
 
 
 #endif 

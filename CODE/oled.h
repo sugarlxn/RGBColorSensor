@@ -4,7 +4,7 @@
 #include "stm32f10x_i2c.h"
 
 
-#define OLED_ADDRESS	0x78 //Í¨¹ýµ÷Õû0Rµç×è,ÆÁ¿ÉÒÔ0x78ºÍ0x7AÁ½¸öµØÖ· -- Ä¬ÈÏ0x78
+#define OLED_ADDRESS	0x78 //Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0Rï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0x78ï¿½ï¿½0x7Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö· -- Ä¬ï¿½ï¿½0x78
 
 void I2C_Configuration(void);
 void I2C_WriteByte(uint8_t addr,uint8_t data);

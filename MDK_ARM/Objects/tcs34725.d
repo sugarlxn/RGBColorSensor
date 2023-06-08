@@ -10,3 +10,4 @@
 .\objects\tcs34725.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\tcs34725.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\tcs34725.o: ..\USER\GPIOLIKE51.h
+.\objects\tcs34725.o: ..\CODE\delay.h

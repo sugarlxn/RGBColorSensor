@@ -16,3 +16,5 @@
 .\objects\main.o: ..\CODE\delay.h
 .\objects\main.o: ..\CODE\oled.h
 .\objects\main.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h
+.\objects\main.o: D:\STM32\MDKapp\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: ..\CODE\TCS34725.h
