@@ -3,6 +3,9 @@
         "delay.h": "c",
         "stm32f10x_gpio.h": "c",
         "stm32f10x.h": "c",
-        "oled.h": "c"
+        "oled.h": "c",
+        "tft.h": "c",
+        "interactive.h": "c",
+        "cstdio": "c"
     }
 }

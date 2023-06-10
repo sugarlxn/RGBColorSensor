@@ -11,5 +11,6 @@
 .\objects\oled.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\oled.o: ..\USER\GPIOLIKE51.h
 .\objects\oled.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h
+.\objects\oled.o: D:\STM32\MDKapp\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\oled.o: ..\CODE\delay.h
 .\objects\oled.o: ..\CODE\codetab.h

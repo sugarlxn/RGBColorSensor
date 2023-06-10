@@ -1,3 +1,5 @@
 Load "e:\\传感器项目作业\\RGBColorSensor\\RGBColorSensor\\MDK_ARM\\Objects\\learning_32.axf" 
-Erase Done.Programming Done.Verify OK.Application running ...
-Flash Load finished at 10:40:45
+_____^
+*** error 56: cannot open file
+Error: Flash Download failed  -  Could not load file 'e:\传感器项目作业\RGBColorSensor\RGBColorSensor\MDK_ARM\Objects\learning_32.axf'
+Flash Load finished at 16:53:21

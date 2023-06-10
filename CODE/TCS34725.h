@@ -96,15 +96,15 @@ typedef struct{
 }COLOR_HSL;//HSL
 
 typedef struct HSV{
-	unsigned short h;       //[0,360]
-	unsigned char  s;       //[0,100]
-	unsigned char  v;       //[0,100]
+	unsigned char  h;       //[0,255]
+	unsigned char  s;       //[0,255]
+	unsigned char  v;       //[0,255]
 }COLOR_HSV;//HSV
 
 
 u8 TCS34725_Init(void);
 u8 TCS34725_GetRawData(COLOR_RGBC *rgbc);
 void RGBtoHSL(COLOR_RGBC *Rgb, COLOR_HSL *Hsl);
-
+void RGBtoHSV(COLOR_RGBC * rgbc, COLOR_HSV * hsv);
 
 #endif 

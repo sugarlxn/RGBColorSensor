@@ -277,23 +277,24 @@ void OLED_DrawBMP(unsigned char x0,unsigned char y0,unsigned char x1,unsigned ch
 
 void OLED_Showint(unsigned char x, unsigned char y, int num, unsigned char TextSize){
 	
-	unsigned char temp;
+	// unsigned char temp;
 	unsigned char sen[7]={"       "};
 	uint16_t i=6;
 	sen[i]='\0';
 	i--;
 	if(num <0){num = -num;sen[0]='-';}
 	else{sen[0]=' ';}
-	while(i){
-		temp = num%10 + 0x30;
-		num/=10;
-		sen[i]=temp;
-		i--;
-		if(num<=0)
-		{
-			break;
-		}
-	}
+	// while(i){
+	// 	temp = num%10 + 0x30;
+	// 	num/=10;
+	// 	sen[i]=temp;
+	// 	i--;
+	// 	if(num<=0)
+	// 	{
+	// 		break;
+	// 	}
+	// }
+	sprintf(&sen[1],"%5d",num);
 	OLED_ShowStr(x, y, sen, 1);
 }
 
@@ -305,8 +306,9 @@ void OLED_showfloat(unsigned char x, unsigned char y, float num, unsigned char T
 	i--;
 	if(num<0){num=-num;sen[0]='-';}
 	else{sen[0]=' ';}
-	//未完待续
-	
+	//完善浮点数显示
+	sprintf(&sen[1],"%5.2f",num);
+	OLED_ShowStr(x, y, sen, 1);
 	
 }
 

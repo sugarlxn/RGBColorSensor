@@ -2,6 +2,7 @@
 
 COLOR_RGBC rgb;
 COLOR_HSL  hsl;
+COLOR_HSV hsv;
 
 //PB6:SCL PB7:SDA 
 /******************************************************************************/
@@ -370,4 +371,48 @@ void RGBtoHSL(COLOR_RGBC *Rgb, COLOR_HSL *Hsl)
 }
 /******************************************************************************/
 
+//RGB2HSV
+void RGBtoHSV(COLOR_RGBC * rgbc, COLOR_HSV * hsv){
+	
+	double R = ((double)rgbc->r)/rgb.c;
+	double G = ((double)rgbc->g)/rgb.c;
+	double B = ((double)rgbc->b)/rgb.c;
+	double CMax = max3v(R,G,B);
+	double CMin = min3v(R,G,B);
+	double delta = CMax - CMin;
+	double H = 0,S = 0,V = 0;
+	//计算H
+	if(delta == 0){
+		H = 0;
+	}
+	else if(CMax == R){
+		H = 60 * ((G-B)/delta);
+	}
+	else if(CMax == G){
+		H = 60 * (((B-R)/delta) + 2);
+	}
+	else if(CMax == B){
+		H = 60 * (((R-G)/delta) + 4);
+	}
 
+	//计算S
+	if(CMax == 0){
+		S = 0;
+	}
+	else{
+		S = delta/CMax;
+	}
+
+	//计算V
+	V = CMax;
+
+	if (H < 0)
+	{
+		H += 360;
+	}
+
+	//转换为8位数据
+	hsv->h = H/2;
+	hsv->s = S*255;
+	hsv->v = V*255;
+}
