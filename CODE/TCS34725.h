@@ -71,7 +71,7 @@
 /******************************************************************************/
 //PB8:SCL PB9:SDA 
 #define TCS_SDA_IN()  {GPIOB->CRH&=0xFFFFFF0F;GPIOB->CRH|=8<<4;}
-#define TCS_SDA_OUT() {GPIOB->CRH&=0xFFFFFF0F;GPIOB->CRL|=3<<4;}
+#define TCS_SDA_OUT() {GPIOB->CRH&=0xFFFFFF0F;GPIOB->CRH|=3<<4;}
 #define TCS_SDA_READ   GPIOB->IDR&(1<<9)
 
 #define TCS_SCL_H     GPIO_SetBits(GPIOB,GPIO_Pin_8)
@@ -95,8 +95,14 @@ typedef struct{
 	unsigned char  l;       //[0,100]
 }COLOR_HSL;//HSL
 
+typedef struct HSV{
+	unsigned short h;       //[0,360]
+	unsigned char  s;       //[0,100]
+	unsigned char  v;       //[0,100]
+}COLOR_HSV;//HSV
+
+
 u8 TCS34725_Init(void);
-u16 TCS34725_GetChannelData(u8 reg);
 u8 TCS34725_GetRawData(COLOR_RGBC *rgbc);
 void RGBtoHSL(COLOR_RGBC *Rgb, COLOR_HSL *Hsl);
 

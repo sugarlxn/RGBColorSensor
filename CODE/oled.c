@@ -278,7 +278,7 @@ void OLED_DrawBMP(unsigned char x0,unsigned char y0,unsigned char x1,unsigned ch
 void OLED_Showint(unsigned char x, unsigned char y, int num, unsigned char TextSize){
 	
 	unsigned char temp;
-	unsigned char sen[7];
+	unsigned char sen[7]={"       "};
 	uint16_t i=6;
 	sen[i]='\0';
 	i--;
@@ -289,6 +289,10 @@ void OLED_Showint(unsigned char x, unsigned char y, int num, unsigned char TextS
 		num/=10;
 		sen[i]=temp;
 		i--;
+		if(num<=0)
+		{
+			break;
+		}
 	}
 	OLED_ShowStr(x, y, sen, 1);
 }

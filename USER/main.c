@@ -12,6 +12,18 @@
 extern COLOR_RGBC rgb;
 extern COLOR_HSL hsl;
 
+int fputc(int ch,FILE *p) 
+ 
+{
+ 
+ Usart_SendByte(USART1,(u8)ch);
+ 
+ while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==RESET);
+ 
+ return ch;
+ 
+}
+
 int main(void)
 {
 
@@ -28,11 +40,14 @@ int main(void)
 
 		TCS34725_GetRawData(&rgb);
 		RGBtoHSL(&rgb, &hsl);
-		OLED_ShowStr(0, 1, "RGB.R", 1);OLED_Showint(50, 1, rgb.r, 3);
-		OLED_ShowStr(0, 2, "RGB.G", 1);OLED_Showint(50, 2, rgb.g, 3);
-		OLED_ShowStr(0, 3, "RGB.B", 1);OLED_Showint(50, 3, rgb.b, 3);
-		OLED_ShowStr(0, 4, "HSL.H", 1);OLED_Showint(50, 4, hsl.h, 3);
-		OLED_ShowStr(0, 5, "HSL.S", 1);OLED_Showint(50, 5, hsl.s, 3);
-		OLED_ShowStr(0, 6, "HSL.L", 1);OLED_Showint(50, 6, hsl.l, 3);
+		OLED_ShowStr(0, 1, (u8*)"RGB.R", 1);OLED_Showint(30, 1, rgb.r, 3);
+		OLED_ShowStr(0, 2, (u8*)"RGB.G", 1);OLED_Showint(30, 2, rgb.g, 3);
+		OLED_ShowStr(0, 3, (u8*)"RGB.B", 1);OLED_Showint(30, 3, rgb.b, 3);
+		OLED_ShowStr(0, 4, (u8*)"HSL.H", 1);OLED_Showint(30, 4, hsl.h, 3);
+		OLED_ShowStr(0, 5, (u8*)"HSL.S", 1);OLED_Showint(30, 5, hsl.s, 3);
+		OLED_ShowStr(0, 6, (u8*)"HSL.L", 1);OLED_Showint(30, 6, hsl.l, 3);
+		OLED_ShowStr(0, 7, (u8*)"RGB.C", 1);OLED_Showint(30, 7, rgb.c, 3);
+		DelayMs(100);
+		
 	}
 }

@@ -21,9 +21,9 @@ void TCS34725_I2C_Start()
 	TCS_SDA_OUT();
 	TCS_SDA_H;
 	TCS_SCL_H;
-	DelayUs(40);//delay_us(4);
+	DelayUs(4);//delay_us(4);
 	TCS_SDA_L;
-	DelayUs(40);//delay_us(4);
+	DelayUs(4);//delay_us(4);
 	TCS_SCL_L;
 }
 /*********************************************/
@@ -32,10 +32,10 @@ void TCS34725_I2C_Stop()
 	TCS_SDA_OUT();
 	TCS_SCL_L;
 	TCS_SDA_L;
-	DelayUs(40);//delay_us(4);
+	DelayUs(4);//delay_us(4);
 	TCS_SCL_H;
 	TCS_SDA_H;
-	DelayUs(40);//delay_us(4);							   	
+	DelayUs(4);//delay_us(4);							   	
 }
 /*********************************************/
 //返回值：1，接收应答失败
@@ -46,9 +46,9 @@ u8 TCS34725_I2C_Wait_ACK()
 	
 	TCS_SDA_IN();//SDA设置为输入  
 	TCS_SDA_H; 
-	DelayUs(10);//delay_us(1);
+	DelayUs(1);//delay_us(1);
 	TCS_SCL_H; 
-	DelayUs(10);//delay_us(1);
+	DelayUs(1);//delay_us(1);
 	while(TCS_SDA_READ)
 	{
 		t++;
@@ -68,9 +68,9 @@ void TCS34725_I2C_ACK()
 	TCS_SCL_L;
 	TCS_SDA_OUT();//sda线输出
 	TCS_SDA_L;
-	DelayUs(20);//delay_us(2);
+	DelayUs(2);//delay_us(2);
 	TCS_SCL_H;
-	DelayUs(20);//delay_us(2);
+	DelayUs(2);//delay_us(2);
 	TCS_SCL_L;
 }
 /*********************************************/
@@ -80,9 +80,9 @@ void TCS34725_I2C_NACK()
 	TCS_SCL_L;
 	TCS_SDA_OUT();//sda线输出
 	TCS_SDA_H;
-	DelayUs(20);//delay_us(2);
+	DelayUs(2);//delay_us(2);
 	TCS_SCL_H;
-	DelayUs(20);//delay_us(2);
+	DelayUs(2);//delay_us(2);
 	TCS_SCL_L;
 }
 /*********************************************/
@@ -100,11 +100,11 @@ void TCS34725_I2C_Send_Byte(u8 byte)
 			TCS_SDA_L;
 		byte <<= 1;
 		
-		DelayUs(20);//delay_us(2);
+		DelayUs(2);//delay_us(2);
 		TCS_SCL_H;
-		DelayUs(20);//delay_us(2);
+		DelayUs(2);//delay_us(2);
 		TCS_SCL_L;
-		DelayUs(20);//delay_us(2);
+		DelayUs(2);//delay_us(2);
 	} 
 }
 /*********************************************/
@@ -117,11 +117,11 @@ u8 TCS34725_I2C_Read_Byte(u8 ack)
 	for(i = 0; i < 8; i++)
 	{
 		TCS_SCL_L;
-		DelayUs(20);//delay_us(2);
+		DelayUs(2);//delay_us(2);
 		TCS_SCL_H;
 		receive <<= 1;
 		if(TCS_SDA_READ) receive++;
-		DelayUs(10);//delay_us(1);
+		DelayUs(1);//delay_us(1);
 	}
 	if (!ack) TCS34725_I2C_NACK();//发送nACK
 	else TCS34725_I2C_ACK(); //发送ACK 
@@ -280,8 +280,8 @@ u8 TCS34725_Init(void)
 	TCS34725_Read(TCS34725_ID, &id, 1);  //TCS34725 的 ID 是 0x44 可以根据这个来判断是否成功连接,0x4D是TCS34727;
 	if(id==0x4D | id==0x44)
 		{
-			TCS34725_SetIntegrationTime(TCS34725_INTEGRATIONTIME_50MS);
-			TCS34725_SetGain(TCS34725_GAIN_1X);
+			TCS34725_SetIntegrationTime(TCS34725_INTEGRATIONTIME_700MS);
+			TCS34725_SetGain(TCS34725_GAIN_60X);
 			TCS34725_Enable();
 			return 1;
 		}
