@@ -1,5 +1,127 @@
-Load "e:\\传感器项目作业\\RGBColorSensor\\RGBColorSensor\\MDK_ARM\\Objects\\learning_32.axf" 
-_____^
-*** error 56: cannot open file
-Error: Flash Download failed  -  Could not load file 'e:\传感器项目作业\RGBColorSensor\RGBColorSensor\MDK_ARM\Objects\learning_32.axf'
-Flash Load finished at 16:53:21
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\STM32\MDKapp\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling stm32f10x_it.c...
+compiling stm32f10x_crc.c...
+compiling stm32f10x_bkp.c...
+compiling misc.c...
+compiling main.c...
+..\USER\main.c(16): error:  #8: missing closing quote
+  unsigned char * str1 = "
+..\USER\main.c(17): error:  #65: expected a ";"
+     ___      _            _             _            
+..\USER\main.c(18): error:  #7: unrecognized token
+    / __\___ | | ___  _ __(_) /\/\   ___| |_ ___ _ __ 
+..\USER\main.c(18): error:  #7: unrecognized token
+    / __\___ | | ___  _ __(_) /\/\   ___| |_ ___ _ __ 
+..\USER\main.c(18): error:  #7: unrecognized token
+    / __\___ | | ___  _ __(_) /\/\   ___| |_ ___ _ __ 
+..\USER\main.c(19): error:  #7: unrecognized token
+   / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|
+..\USER\main.c(19): error:  #7: unrecognized token
+   / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|
+..\USER\main.c(19): warning:  #192-D: unrecognized character escape sequence
+   / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|
+..\USER\main.c(19): warning:  #192-D: unrecognized character escape sequence
+   / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|
+..\USER\main.c(19): warning:  #192-D: unrecognized character escape sequence
+   / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|
+..\USER\main.c(19): error:  #26: too many characters in character constant
+   / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|
+..\USER\main.c(20): error:  #7: unrecognized token
+  / /__| (_) | | (_) | |  | / /\/\ \  __/ ||  __/ |   
+..\USER\main.c(20): error:  #7: unrecognized token
+  / /__| (_) | | (_) | |  | / /\/\ \  __/ ||  __/ |   
+..\USER\main.c(20): error:  #7: unrecognized token
+  / /__| (_) | | (_) | |  | / /\/\ \  __/ ||  __/ |   
+..\USER\main.c(21): error:  #7: unrecognized token
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(21): error:  #7: unrecognized token
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(21): error:  #7: unrecognized token
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(21): error:  #7: unrecognized token
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(21): error:  #7: unrecognized token
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(21): error:  #7: unrecognized token
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(21): error:  #7: unrecognized token
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(21): error:  #7: unrecognized token
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(21): error:  #8: missing closing quote
+  \____/\___/|_|\___/|_|  |_\/    \/\___|\__\___|_|   ";
+..\USER\main.c(47): warning:  #192-D: unrecognized character escape sequence
+  	OLED_ShowStr(0, 1,(u8*)"  / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|", 1)
+..\USER\main.c(47): warning:  #192-D: unrecognized character escape sequence
+  	OLED_ShowStr(0, 1,(u8*)"  / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|", 1)
+..\USER\main.c(47): warning:  #192-D: unrecognized character escape sequence
+  	OLED_ShowStr(0, 1,(u8*)"  / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|", 1)
+..\USER\main.c(47): warning:  #192-D: unrecognized character escape sequence
+  	OLED_ShowStr(0, 1,(u8*)"  / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|", 1)
+..\USER\main.c(47): warning:  #192-D: unrecognized character escape sequence
+  	OLED_ShowStr(0, 1,(u8*)"  / /  / _ \| |/ _ \| '__| |/    \ / _ \ __/ _ \ '__|", 1)
+..\USER\main.c(57): warning:  #12-D: parsing restarts here after previous syntax error
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #79: expected a type specifier
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #79: expected a type specifier
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #757: variable "rgb"  is not a type name
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #18: expected a ")"
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): warning:  #77-D: this declaration has no storage class or type specifier
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #147: declaration is incompatible with "void OLED_Showint(unsigned char, unsigned char, int, unsigned char)"  (declared at line 23 of "..\CODE\oled.h")
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #79: expected a type specifier
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #79: expected a type specifier
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #79: expected a type specifier
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #79: expected a type specifier
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): warning:  #77-D: this declaration has no storage class or type specifier
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c(57): error:  #147: declaration is incompatible with "void OLED_showfloat(unsigned char, unsigned char, float, unsigned char)"  (declared at line 24 of "..\CODE\oled.h")
+  		OLED_ShowStr(0, 2, (u8*)"G", 1);OLED_Showint(10, 2, rgb.g, 3);OLED_showfloat(60, 2, ((double)rgb.g)*255/rgb.c, 3);
+..\USER\main.c: 11 warnings, 30 errors
+compiling stm32f10x_cec.c...
+compiling stm32f10x_can.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_dac.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_sdio.c...
+compiling stm32f10x_spi.c...
+assembling startup_stm32f10x_md.s...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_wwdg.c...
+compiling stm32f10x_tim.c...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+compiling key.c...
+compiling blueteeth.c...
+compiling led.c...
+compiling delay.c...
+compiling oled.c...
+..\CODE\oled.c(297): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  	sprintf(&sen[1],"%5d",num);
+..\CODE\oled.c(310): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  	sprintf(&sen[1],"%5.2f",num);
+..\CODE\oled.c: 2 warnings, 0 errors
+compiling TCS34725.c...
+".\Objects\learning_32.axf" - 30 Error(s), 13 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:04

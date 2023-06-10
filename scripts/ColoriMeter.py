@@ -59,12 +59,12 @@ class ColoriMeter():
         cv.putText(self.image, 'R:'+str(self.color.R), (10, 90),
                    cv.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
         cv.imshow('imgbgr', self.image)
-        self.hsv = cv.cvtColor(self.image, cv.COLOR_BGR2HSV)
-        self.hls = cv.cvtColor(self.image, cv.COLOR_BGR2HLS)
-        self.lab = cv.cvtColor(self.image, cv.COLOR_BGR2LAB)
-        self.luv = cv.cvtColor(self.image, cv.COLOR_BGR2LUV)
+        # self.hsv = cv.cvtColor(self.image, cv.COLOR_BGR2HSV)
+        # self.hls = cv.cvtColor(self.image, cv.COLOR_BGR2HLS)
+        # self.lab = cv.cvtColor(self.image, cv.COLOR_BGR2LAB)
+        # self.luv = cv.cvtColor(self.image, cv.COLOR_BGR2LUV)
 
-        key = cv.waitKey(25) & 0xFF
+        key = cv.waitKey(10) & 0xFF
         if key == ord('q'):
             self.color.close()
             cv.destroyAllWindows()

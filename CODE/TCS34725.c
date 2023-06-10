@@ -1,8 +1,6 @@
 #include "TCS34725.h"
 
 COLOR_RGBC rgb;
-COLOR_HSL  hsl;
-COLOR_HSV hsv;
 
 //PB6:SCL PB7:SDA 
 /******************************************************************************/
