@@ -86,7 +86,7 @@ int main(void)
 	OLED_CLS();
 
 	OLED_ShowStr(0, 0, (u8*)"TCS34725 init...", 1);
-	OLED_DrawBMP(0,1,128,8,(unsigned char *)BMPm);
+	OLED_DrawBMP(0,1,128,7,(unsigned char *)BMPm);
 	DelayS(1);
 	OLED_CLS();
 

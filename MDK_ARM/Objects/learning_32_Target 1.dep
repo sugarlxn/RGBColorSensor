@@ -1,6 +1,6 @@
 Dependencies for Project 'learning_32', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (..\USER\main.c)(0x6484A363)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\USER -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\CODE-ID:\STM32\MDKapp\package\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\USER\main.c)(0x64858D77)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\CM3\CoreSupport -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\Libraries\STM32F10x_StdPeriph_Driver\src -I ..\USER -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm -I ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I ..\CODE-ID:\STM32\MDKapp\package\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x6188EF87)
 I (..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x6188EF87)
 I (D:\STM32\MDKapp\ARM\ARMCC\include\stdint.h)(0x6025237E)
