@@ -42,7 +42,7 @@ class raw_data_keeper():
 class ColoriMeter():
     def __init__(self) -> None:
         self.color = raw_data_keeper()
-        self.image = np.zeros((300, 300, 3), np.uint8)
+        self.image = np.zeros((500, 500, 3), np.uint8)
         self.hsv = np.zeros((300, 300, 3), np.uint8)
         self.hls = np.zeros((300, 300, 3), np.uint8)
         self.lab = np.zeros((300, 300, 3), np.uint8)
