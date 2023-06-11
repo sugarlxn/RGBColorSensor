@@ -1,6 +1,6 @@
 # Title
 
-**[中文](./maximal_readme.md) / [English](./maximal_readme_en.md)**
+**[中文](./README.md) / [English](./README_EN.md)**
 
 <img src="./assets/image-20230604002839128.png" alt="image-20230604002839128" style="zoom:200%;" />
 
