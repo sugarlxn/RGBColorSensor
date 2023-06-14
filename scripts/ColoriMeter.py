@@ -66,12 +66,12 @@ class ColoriMeter():
         self.lab = cv.cvtColor(self.image, cv.COLOR_BGR2LAB)
         # self.luv = cv.cvtColor(self.image, cv.COLOR_BGR2LUV)
         # self.xyz = cv.cvtColor(self.image, cv.COLOR_BGR2XYZ)
-        # cv.putText(self.image, 'L:'+str(self.lab[0, 0, 0]), (10, 120),
-        #            cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 1)  
-        # cv.putText(self.image, 'a:'+str(self.lab[0, 0, 1]), (10, 150),
-        #            cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 1)
-        # cv.putText(self.image, 'b:'+str(self.lab[0, 0, 2]), (10, 180),
-        #            cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 1)
+        cv.putText(self.image, 'L:'+str(self.lab[0, 0, 0]), (10, 120),
+                   cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 1)  
+        cv.putText(self.image, 'a:'+str(self.lab[0, 0, 1]), (10, 150),
+                   cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 1)
+        cv.putText(self.image, 'b:'+str(self.lab[0, 0, 2]), (10, 180),
+                   cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 1)
        
         cv.imshow('imgbgr', self.image)
 
@@ -80,32 +80,32 @@ class ColoriMeter():
             self.color.close()
             cv.destroyAllWindows()
             return False
-        elif key == ord('s'):
-            self.sample_lab_list.append((self.lab[0, 0, :], [self.color.B, self.color.G, self.color.R]))
-            print("save one sample")
-        elif key ==ord('p'):
-            if(len(self.sample_lab_list) >= 2):
-                print(self.sample_lab_list)
-                lab1 = self.sample_lab_list.pop()
-                lab2 = self.sample_lab_list.pop()
-                deltaL = lab1[0][0] - lab2[0][0]
-                deltaA = lab1[0][1] - lab2[0][1]
-                deltaB = lab1[0][2] - lab2[0][2]
-                deltaE = np.sqrt(deltaL**2 + deltaA**2 + deltaB**2)
-                print("deltaE=",deltaE)
-                delta_image = np.zeros((300, 300, 3), np.uint8)
-                delta_image[:150, :150, 0] = lab1[1][0]
-                delta_image[:150, :150, 1] = lab1[1][1]
-                delta_image[:150, :150, 2] = lab1[1][2]
-                delta_image[150:300, 150:300, 0] = lab2[1][0]
-                delta_image[150:300, 150:300, 1] = lab2[1][1]
-                delta_image[150:300, 150:300, 2] = lab2[1][2]
-                cv.imshow('delta', delta_image)
-                cv.waitKey(0)
-                cv.destroyWindow('delta')
-                self.sample_lab_list.clear()
-            else:
-                print("sample_lab_list is not enough!")
+        # elif key == ord('s'):
+        #     self.sample_lab_list.append((self.lab[0, 0, :], [self.color.B, self.color.G, self.color.R]))
+        #     print("save one sample")
+        # elif key ==ord('p'):
+        #     if(len(self.sample_lab_list) >= 2):
+        #         print(self.sample_lab_list)
+        #         lab1 = self.sample_lab_list.pop()
+        #         lab2 = self.sample_lab_list.pop()
+        #         deltaL = lab1[0][0] - lab2[0][0]
+        #         deltaA = lab1[0][1] - lab2[0][1]
+        #         deltaB = lab1[0][2] - lab2[0][2]
+        #         deltaE = np.sqrt(deltaL**2 + deltaA**2 + deltaB**2)
+        #         print("deltaE=",deltaE)
+        #         delta_image = np.zeros((300, 300, 3), np.uint8)
+        #         delta_image[:150, :150, 0] = lab1[1][0]
+        #         delta_image[:150, :150, 1] = lab1[1][1]
+        #         delta_image[:150, :150, 2] = lab1[1][2]
+        #         delta_image[150:300, 150:300, 0] = lab2[1][0]
+        #         delta_image[150:300, 150:300, 1] = lab2[1][1]
+        #         delta_image[150:300, 150:300, 2] = lab2[1][2]
+        #         cv.imshow('delta', delta_image)
+        #         cv.waitKey(0)
+        #         cv.destroyWindow('delta')
+        #         self.sample_lab_list.clear()
+        #     else:
+        #         print("sample_lab_list is not enough!")
 
 if __name__ == "__main__":
     color = ColoriMeter()
