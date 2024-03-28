@@ -10,6 +10,8 @@
 
 <img src="./assets/1.jpg" alt="1" style="zoom:10%;" />
 
+**[视频演示bilibili](https://www.bilibili.com/video/BV15V4y1m7mT/?spm_id_from=333.999.0.0)**
+
 ## 如何使用
 
 ```Shell
